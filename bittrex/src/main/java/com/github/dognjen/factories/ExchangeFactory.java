@@ -1,6 +1,8 @@
-package com.github.dognjen;
+package com.github.dognjen.factories;
 
-import com.github.dognjen.exchange.Bittrex;
+import com.github.dognjen.clients.cred.ExchangeCredentials;
+import com.github.dognjen.enums.CryptoExchange;
+import com.github.dognjen.clients.BittrexClient;
 
 /**
  * Created by Dejan on 02/01/2018.
@@ -11,7 +13,7 @@ public class ExchangeFactory {
 
         switch (exchange){
             case BITTREX:
-                return new Bittrex(credentials);
+                return new BittrexClient(credentials);
             case BITFINEX:
                 return null;
             case COINBASE:

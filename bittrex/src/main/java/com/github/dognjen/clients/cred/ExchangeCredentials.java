@@ -1,4 +1,4 @@
-package com.github.dognjen;
+package com.github.dognjen.clients.cred;
 
 /**
  * Created by Dejan on 02/01/2018.

@@ -1,18 +1,18 @@
-package com.github.dognjen.exchange;
+package com.github.dognjen.clients;
 
-import com.github.dognjen.Exchange;
-import com.github.dognjen.ExchangeCredentials;
+import com.github.dognjen.factories.Exchange;
+import com.github.dognjen.clients.cred.ExchangeCredentials;
 
 /**
  * Created by Dejan on 01/01/2018.
  */
-public class Bittrex extends Exchange {
+public class BittrexClient extends Exchange {
 
     private String url = "https://bittrex.com/api/v1.1";
 
     private ExchangeCredentials credentials;
 
-    public Bittrex(ExchangeCredentials credentials){
+    public BittrexClient(ExchangeCredentials credentials){
         this.credentials = credentials;
     }
 

@@ -1,4 +1,4 @@
-package com.github.dognjen;
+package com.github.dognjen.factories;
 
 /**
  * Created by Dejan on 01/01/2018.
