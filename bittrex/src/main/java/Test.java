@@ -1,3 +1,4 @@
+import com.github.dognjen.clients.BittrexClient;
 import com.github.dognjen.enums.CryptoExchange;
 import com.github.dognjen.factories.Exchange;
 import com.github.dognjen.clients.cred.ExchangeCredentials;
@@ -14,5 +15,7 @@ public class Test {
         Exchange exchange = ExchangeFactory.create(CryptoExchange.BITTREX, credentials);
 
         System.out.print(exchange.getUrl());
+
+        ((BittrexClient) exchange).getMarkets();
     }
 }

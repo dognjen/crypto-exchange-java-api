@@ -1,38 +1,57 @@
 package com.github.dognjen.clients.bittrex;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
-/**
- * Created by Dejan Ognjenović on 02/01/2018.
- */
 public class BittrexMarketContent {
 
+    private String marketCurrency;
+    private String baseCurrency;
+    private String marketCurrencyLong;
+    private String baseCurrencyLong;
+    private BigDecimal minTradeSize;
     private String marketName;
+    private boolean isActive;
+    private String created;
 
-    private BigDecimal high;
+    public String getMarketCurrency() {
+        return marketCurrency;
+    }
 
-    private BigDecimal low;
+    public void setMarketCurrency(String marketCurrency) {
+        this.marketCurrency = marketCurrency;
+    }
 
-    private BigDecimal volume;
+    public String getBaseCurrency() {
+        return baseCurrency;
+    }
 
-    private BigDecimal last;
+    public void setBaseCurrency(String baseCurrency) {
+        this.baseCurrency = baseCurrency;
+    }
 
-    private BigDecimal baseVolume;
+    public String getMarketCurrencyLong() {
+        return marketCurrencyLong;
+    }
 
-    private Date timestamp;
+    public void setMarketCurrencyLong(String marketCurrencyLong) {
+        this.marketCurrencyLong = marketCurrencyLong;
+    }
 
-    private BigDecimal bid;
+    public String getBaseCurrencyLong() {
+        return baseCurrencyLong;
+    }
 
-    private int openBuyOrders;
+    public void setBaseCurrencyLong(String baseCurrencyLong) {
+        this.baseCurrencyLong = baseCurrencyLong;
+    }
 
-    private int openSellOrders;
+    public BigDecimal getMinTradeSize() {
+        return minTradeSize;
+    }
 
-    private BigDecimal prevDay;
-
-    private Date created;
-
-    private String displayMarketName;
+    public void setMinTradeSize(BigDecimal minTradeSize) {
+        this.minTradeSize = minTradeSize;
+    }
 
     public String getMarketName() {
         return marketName;
@@ -42,99 +61,19 @@ public class BittrexMarketContent {
         this.marketName = marketName;
     }
 
-    public BigDecimal getHigh() {
-        return high;
+    public boolean isActive() {
+        return isActive;
     }
 
-    public void setHigh(BigDecimal high) {
-        this.high = high;
+    public void setActive(boolean active) {
+        isActive = active;
     }
 
-    public BigDecimal getLow() {
-        return low;
-    }
-
-    public void setLow(BigDecimal low) {
-        this.low = low;
-    }
-
-    public BigDecimal getVolume() {
-        return volume;
-    }
-
-    public void setVolume(BigDecimal volume) {
-        this.volume = volume;
-    }
-
-    public BigDecimal getLast() {
-        return last;
-    }
-
-    public void setLast(BigDecimal last) {
-        this.last = last;
-    }
-
-    public BigDecimal getBaseVolume() {
-        return baseVolume;
-    }
-
-    public void setBaseVolume(BigDecimal baseVolume) {
-        this.baseVolume = baseVolume;
-    }
-
-    public Date getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(Date timestamp) {
-        this.timestamp = timestamp;
-    }
-
-    public BigDecimal getBid() {
-        return bid;
-    }
-
-    public void setBid(BigDecimal bid) {
-        this.bid = bid;
-    }
-
-    public int getOpenBuyOrders() {
-        return openBuyOrders;
-    }
-
-    public void setOpenBuyOrders(int openBuyOrders) {
-        this.openBuyOrders = openBuyOrders;
-    }
-
-    public int getOpenSellOrders() {
-        return openSellOrders;
-    }
-
-    public void setOpenSellOrders(int openSellOrders) {
-        this.openSellOrders = openSellOrders;
-    }
-
-    public BigDecimal getPrevDay() {
-        return prevDay;
-    }
-
-    public void setPrevDay(BigDecimal prevDay) {
-        this.prevDay = prevDay;
-    }
-
-    public Date getCreated() {
+    public String getCreated() {
         return created;
     }
 
-    public void setCreated(Date created) {
+    public void setCreated(String created) {
         this.created = created;
-    }
-
-    public String getDisplayMarketName() {
-        return displayMarketName;
-    }
-
-    public void setDisplayMarketName(String displayMarketName) {
-        this.displayMarketName = displayMarketName;
     }
 }

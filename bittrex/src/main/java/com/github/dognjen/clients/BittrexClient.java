@@ -1,6 +1,6 @@
 package com.github.dognjen.clients;
 
-import com.github.dognjen.clients.bittrex.BittrexMarketContent;
+import com.github.dognjen.clients.bittrex.BittrexMarketResponse;
 import com.github.dognjen.factories.Exchange;
 import com.github.dognjen.clients.cred.ExchangeCredentials;
 
@@ -38,8 +38,10 @@ public class BittrexClient extends Exchange {
     }
 
     public void getMarkets() {
-        BittrexMarketContent market = client.target("https://bittrex.com/api/v1.1/public/getmarkets").
-                request(MediaType.APPLICATION_JSON_TYPE).get(BittrexMarketContent.class);
+        BittrexMarketResponse market = client.target("https://bittrex.com/api/v1.1/public/getmarkets").
+                request(MediaType.APPLICATION_JSON_TYPE).get(BittrexMarketResponse.class);
+
+        System.out.println();
 
 
     }
