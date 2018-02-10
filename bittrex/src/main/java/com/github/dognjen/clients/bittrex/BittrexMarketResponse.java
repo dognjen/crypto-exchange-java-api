@@ -3,7 +3,7 @@ package com.github.dognjen.clients.bittrex;
 import java.util.List;
 
 /**
- * Created by Dejan on 02/01/2018.
+ * Created by Dejan Ognjenović on 02/01/2018.
  */
 public class BittrexMarketResponse extends BittrexResponse{
 
