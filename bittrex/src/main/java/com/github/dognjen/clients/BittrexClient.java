@@ -41,8 +41,6 @@ public class BittrexClient extends Exchange {
         BittrexMarketResponse market = client.target("https://bittrex.com/api/v1.1/public/getmarkets").
                 request(MediaType.APPLICATION_JSON_TYPE).get(BittrexMarketResponse.class);
 
-        System.out.println();
-
 
     }
 /*

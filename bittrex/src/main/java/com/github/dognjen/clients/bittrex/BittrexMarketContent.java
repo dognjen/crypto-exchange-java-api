@@ -1,16 +1,35 @@
 package com.github.dognjen.clients.bittrex;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.math.BigDecimal;
 
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class BittrexMarketContent {
 
+    @JsonProperty("MarketCurrency")
     private String marketCurrency;
+
+    @JsonProperty("BaseCurrency")
     private String baseCurrency;
+
+    @JsonProperty("MarketCurrencyLong")
     private String marketCurrencyLong;
+
+    @JsonProperty("BaseCurrencyLong")
     private String baseCurrencyLong;
+
+    @JsonProperty("MinTradeSize")
     private BigDecimal minTradeSize;
+
+    @JsonProperty("MarketName")
     private String marketName;
+
+    @JsonProperty("IsActive")
     private boolean isActive;
+
+    @JsonProperty("Created")
     private String created;
 
     public String getMarketCurrency() {
