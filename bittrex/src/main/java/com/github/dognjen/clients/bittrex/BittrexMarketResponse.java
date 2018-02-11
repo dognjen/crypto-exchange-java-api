@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by Dejan Ognjenović on 02/01/2018.
  */
-public class BittrexMarketResponse extends BittrexResponse{
+public class BittrexMarketResponse extends BittrexResponse {
 
     private List<BittrexMarketContent> result;
 
