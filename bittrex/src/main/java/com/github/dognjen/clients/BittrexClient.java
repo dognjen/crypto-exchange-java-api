@@ -1,6 +1,7 @@
 package com.github.dognjen.clients;
 
 import com.github.dognjen.clients.bittrex.BittrexMarketResponse;
+import com.github.dognjen.clients.bittrex.BittrexResponse;
 import com.github.dognjen.factories.Exchange;
 import com.github.dognjen.clients.cred.ExchangeCredentials;
 
@@ -38,36 +39,36 @@ public class BittrexClient extends Exchange {
     }
 
     public void getMarkets() {
-        BittrexMarketResponse market = client.target("https://bittrex.com/api/v1.1/public/getmarkets").
+        BittrexResponse market = client.target("https://bittrex.com/api/v1.1/public/getmarkets").
                 request(MediaType.APPLICATION_JSON_TYPE).get(BittrexMarketResponse.class);
 
 
     }
-/*
+
     public void getCurrencies() {
 
-        List<MarketSummary> marketSummaries = client.target("https://bittrex.com/api/v1.1/public/getcurrencies").
-                request(MediaType.APPLICATION_JSON_TYPE).get(MarketSummaryMsg.class).getResult();
+        BittrexResponse currencies = client.target("https://bittrex.com/api/v1.1/public/getcurrencies").
+                request(MediaType.APPLICATION_JSON_TYPE).get(BittrexResponse.class);
 
     }
+    /*
+        public void getTicker() {
 
-    public void getTicker() {
 
+            List<MarketSummary> marketSummaries = client.target("https://bittrex.com/api/v1.1/public/getticker").
+                    request(MediaType.APPLICATION_JSON_TYPE).get(MarketSummaryMsg.class).getResult();
 
-        List<MarketSummary> marketSummaries = client.target("https://bittrex.com/api/v1.1/public/getticker").
-                request(MediaType.APPLICATION_JSON_TYPE).get(MarketSummaryMsg.class).getResult();
+        }
 
-    }
+        public List<MarketSummary> getMarketSummaries() {
 
-    public List<MarketSummary> getMarketSummaries() {
+            List<MarketSummary> marketSummaries = client.target("https://bittrex.com/api/v1.1/public/getmarketsummaries").
+                    request(MediaType.APPLICATION_JSON_TYPE).get(MarketSummaryMsg.class).getResult();
 
-        List<MarketSummary> marketSummaries = client.target("https://bittrex.com/api/v1.1/public/getmarketsummaries").
-                request(MediaType.APPLICATION_JSON_TYPE).get(MarketSummaryMsg.class).getResult();
+            return marketSummaries;
 
-        return marketSummaries;
-
-    }
-*/
+        }
+    */
     public void getMarketSummary() {
 
     }
